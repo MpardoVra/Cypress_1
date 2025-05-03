@@ -1,0 +1,24 @@
+{
+  "name": "cypress-2025-curso",
+  "version": "1.0.0",
+  "description": "curso de cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mauricio",
+  "license": "ISC",
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.3.0",
+    "cypress": "^14.2.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-plugin-tab": "^1.0.5",
+    "cypress-xpath": "^2.0.1"
+  },
+  "cypress-cucumber-preprocessor": {
+  "nonGlobalStepDefinitions": false,
+  "stepDefinitions": "cypress/e2e/step-definitions"
+}
+  }
+

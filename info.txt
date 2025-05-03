@@ -1,0 +1,140 @@
+instalacion:
+- npm init 
+/// lo instalamos en la consola de visual studio.
+
+
+-npm install cypress --save-dev
+ ///instalamos cypress en consola.
+
+- npx install: https://www.npmjs.com/package/npx
+--> npm install g npx
+
+- npx cypress install --force
+
+
+1- para iniciar Cypress usamos
+#########################################
+npx cypress open
+
+2- para terminar proceso y cerrar cypress usamos
+########################################################
+Ctrl+C
+
+3-para parar la consola en Visual studio.
+#################################################
+Ctrl+C 
+
+cls -- limpia el terminal
+
+4- npm install -D cypress-xpath
+################################################################
+
+5- // funcion de pluggins
+require('cypress-plugin-tab')
+#############################################################
+
+6- Solucion a errores de pagina.
+Cypress.on('uncaught:exception', (err, runnable) => {
+    return false
+  })
+###################################################################
+
+7- para encontrar elementos usamos path
+requerir ( 'cypress-xpath' ) ;
+
+8- Para la instalacion de los Snippets.
+
+
+TIPS DE USO DE SIGNOS Y FUNCIONES POR CSS:
+
+1- EN ID: #
+
+2- CLASS: punto + la clase.
+
+3- en elemento: #
+
+4- THEN: tambien lo usamos para buscar palabras, tomar textos de la pagina y validarlos.
+
+5- FIND: tambien sirve para encontrar palabras. 
+
+6- SELECCION POR ATRIBUTOS: POR TYPE DEBEMOS HACER [type='nombre'] 
+SI LE DECIMOS QUE TIPO DE ELEMENTO ES, PODEMOS AGREGAR IMPUT, ejemplo: input[type="email"]
+EL ELEMENTO VIENE AL PRINCIPIO DE LA LINEA DE CODIGO A INSPECCIONAR.
+PARA FORTALECER AUN MAS LA BUSQUEDA EN CSS PODEMOS ESCRIBIR...
+input#userName[type='text']
+
+aqui buscamos por el, INPUT, ID Y TYPE.
+
+
+7- REDIRECCIONAR PAGINA SOLUCION: Primero seleccionar el elemento, comprobar que este en la miosma linea y agarrar por su id o xpath +
+.invoke('removeAttr','target').click
+
+
+8- SELECTOR POR XPATH:
+EL USO DE OR + AND: ejemplo: //input[@id='userName'and @type='text'] 
+
+En este ejemplo se tiene que cumplir ambas selecciiones. si una de las 2 no es, esta no se cumple.
+OR: si usamos or, mientras una de las 2 se cumpla, va a jalar.
+Se pueden hacer selecciones multiples colacando un atributo que sea para mas lineas de codigo.
+
+
+9- AGARRAR ELEMENTOS POR SU TEXTO: situacion... no tenemos mucho para inspeccionar.
+  tan solo div + style. aqui podemos usar el ejemplo y lo encuentra, tambien por span. 
+//div[text()='Text Box']
+//span[text()='Dinamic Properties']
+
+
+10- XPATH POR TEXTO: situacion... hay 2 casillas con el texto BOX, para jalar ambas ponemos...
+//span[contains(text(),'Box')]
+
+
+
+COMANDOS DE CONSOLA:
+
+1- node_modules\.bin\cypress run
+Nos manda todos los test de nuestro aplicativo desde la consola de Node.
+
+2- npx cypress run  --headed
+Nos corre todo pero desde el navegador.
+
+3- npx cypress run  --browser chrome
+Nos corre todo de especificamos el navegador.
+
+4- npx cypress run --spec"cypress\e2e\seccion_2\01checkbox.cy.js"
+Nos corre un archivo en especifico.
+
+5- npx cypress run  --spec"cypress\e2e\seccion_2\*"
+Corremos todos los comandos de la seccion_2
+
+6- COMNADO DE TIEMPO: podemos cambiar este tiempo segun las necesidades. 
+Cypress.config("defaultCommandTimeout",15000)
+
+7- COMANDO PARA LANZAR VIDEO DE EVIDENCIAS DE PRUEBAS.
+   BUSCAMOS LA RUTA QUE QUEREMOS ENVIAR Y LA PONEMOS COMO EL EJEMPLO ABAJO.
+npx cypress run --spec "cypress\e2e\seccion_6\1pageObject_1.cy.js
+
+8- CREAR SCREENSHOTS: tener cuidado con el tiempo, puede afectar al screen. 
+.screenshots('+ campo que quieras mostrar')
+
+
+
+
+ERRORES y TIPS:
+
+- MULTIPLES NUMEROS O LISTAS, SE ARREGLA CON (((FIRST))) 
+FIRST = EL PRIMERO QUE ENCUENTRE. 
+
+
+- PARA CAMBIAR VARIOS NOMBRES EN VARIAS CASILLAS O ARRAYS, USAMOS...
+seleccionamos el nombre que debemos cambiar.
+edit + replace + (nombre) + replace all.
+
+
+- FIXTURE: PARA USAR ARCHIVO DE EXCEL USAMOS LA PAGINA...
+https://beautifytools.com/excel-to-json-converter.php
+PASO 1 - browse (buscamos el archivo)
+PASO 2 - descargamos. 
+PASO 3 - pegamos nuestro archivo en nuestra carpeta fixture.
+PASO 4 - limpiamos el archivo para pasarlo correctamente. 
+PASO 5 - lo usamos en nuestro codigo y listo. 
+
