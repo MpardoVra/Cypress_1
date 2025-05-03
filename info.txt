@@ -138,3 +138,12 @@ PASO 3 - pegamos nuestro archivo en nuestra carpeta fixture.
 PASO 4 - limpiamos el archivo para pasarlo correctamente. 
 PASO 5 - lo usamos en nuestro codigo y listo. 
 
+GIT:
+
+- git add . SIRVE PARA GUARDAR DATOS.
+
+- git commit -m "cargar al repositorio"
+
+- git status PARA COMPROBAR LAS FILAS GUARDADAS.
+
+- git checkout -- . PARA RECUPERAR ARCHIVOS BORRADOS (SE DEBEN GUARDAR PARA RECUPERAR)
