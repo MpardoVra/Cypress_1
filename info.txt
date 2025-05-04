@@ -138,7 +138,10 @@ PASO 3 - pegamos nuestro archivo en nuestra carpeta fixture.
 PASO 4 - limpiamos el archivo para pasarlo correctamente. 
 PASO 5 - lo usamos en nuestro codigo y listo. 
 
-GIT:
+##################################    GIT   ##########################################
+
+- PARA INICIR TU PROYECTO GIT ES FUNDAMENTAL CREAR UNA COPIA DE TU CARPETA DE ARCHIVOS.
+- EN VISUAL BUSCAMOS LA CARPETA CLONADA Y PINCHAMOS EN FILE + OPEN FOLDER + git init (en la terminal)
 
 - git add . SIRVE PARA GUARDAR DATOS.
 
@@ -160,6 +163,19 @@ PARA BORRAR DATOS, EJEMPLO borrar mp4:
 
 - git reset *.mp4
 
-para mojorar el git...
+PARA SALIR DEL GIT LOG PULSAMOS LA LETRA #####   Q   #######
+
+
+#######################  para mojorar el git... ###############################
 
 - git log --oneline --decorate --graph
+
+- git reflog  (((( NOS DA TODO EL HISTORIAL DE MOVIMIENTOS DE ARCHIVOS QUE HEMOS EJECUTADO EN GIT. ))))
+
+- git reset --hard + (el codigo que necesitamos recuperar). 
+
+ ##### SI NECESITAMOS IGNORAR ALGUN ARCHIVO USAMOS #####
+
+
+
+
