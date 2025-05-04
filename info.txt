@@ -147,3 +147,19 @@ GIT:
 - git status PARA COMPROBAR LAS FILAS GUARDADAS.
 
 - git checkout -- . PARA RECUPERAR ARCHIVOS BORRADOS (SE DEBEN GUARDAR PARA RECUPERAR)
+
+agregar datos con distinto formato, ejemplo:
+
+- git add .\evidencias\
+
+- git add *.mp4
+
+- git add *.json
+
+PARA BORRAR DATOS, EJEMPLO borrar mp4:
+
+- git reset *.mp4
+
+para mojorar el git...
+
+- git log --oneline --decorate --graph
